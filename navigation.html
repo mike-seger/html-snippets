@@ -1,0 +1,61 @@
+<DOCTYPE html>
+<html>
+<head>
+    <meta content="utf-8" http-equiv="encoding">
+    <title>Navigation</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        nav { display:block; }
+        nav .title {
+            text-transform: uppercase;
+            background-color: black;
+            padding: 11px 7px 10px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        nav select { 
+            height: auto;
+            width: 200%; 
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+            outline: none;
+            outline-style: none; 
+            -moz-outline-style: none !important;
+        }
+
+        nav option { padding: 7px 7px 6px; line-height: 2em; }
+        nav option:hover { background-color: #333333; }
+        nav option:checked {
+            color: white ;
+            outline: none ;
+            -webkit-text-fill-color: white !important;
+            background: #1e90ff repeat 
+                url("data:image/svg+xml;utf8,<svg preserveAspectRatio='none' viewBox='0 0 1 1' xmlns='http://www.w3.org/2000/svg'><rect width='1' height='1' fill='rgb(31,144,255)'/></svg>");
+            background-size: 200%;
+            outline-style: none; 
+            -moz-outline-style: none;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="title">Title</div>
+        <form target="content">
+            <label>
+                <select name="url" size="5" onchange="blur();"
+                        onclick="this.form.action=this.value; this.form.submit();">
+                    <option value="content.html#1" selected="selected">Content 1</option>
+                    <option value="content.html#2">Content 2</option>
+                    <option value="content.html#3">Content 3</option>
+                    <option value="content.html#4">Content 4</option>
+                    <option value="content.html#5">Content 5</option>
+                </select>
+            </label>
+        </form>
+    </nav>
+</body>
+
+</html>

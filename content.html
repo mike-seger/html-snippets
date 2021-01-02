@@ -1,0 +1,29 @@
+<DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <title>Content</title>
+        <link rel="stylesheet" href="common.css">
+        <style>
+            div {
+                font-size: 400px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translateX(-50%) translateY(-50%);
+                -webkit-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div>
+            <script>
+                const urlParams = new URLSearchParams(window.location.search);
+                document.write(urlParams.get("url").replace(/.*#/,''));
+            </script>
+        </div>
+    </body>
+    
+    </html>
